@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../core/util/outline_text.dart';
 import '../../../../core/constant/colors.dart';
 import '../../../../core/constant/numbers.dart';
+import '../../../../core/constant/strings.dart';
 import '../bloc/date_trivia_bloc.dart';
 
 class TriviaControl extends StatefulWidget {
@@ -14,21 +15,6 @@ class TriviaControl extends StatefulWidget {
 
 class _TriviaControlState extends State<TriviaControl> {
   String day, month;
-  List listOfDays = [for (var i = 1; i <= 31; i += 1) '$i'];
-  List listOfMonths = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ];
 
   @override
   Widget build(BuildContext context) {

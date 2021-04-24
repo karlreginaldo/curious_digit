@@ -33,23 +33,15 @@ class _DateTriviaPageState extends State<DateTriviaPage> {
             BlocBuilder<DateTriviaBloc, DateTriviaState>(
               builder: (context, state) {
                 if (state is Empty) {
-                  print('Empty');
-                  return MessageDisplay(
-                      size: size, text: 'Start Number Trivia!');
+                  return MessageDisplay(size: size, text: 'Start Date Trivia!');
                 } else if (state is Loading) {
-                  print('Loading');
-
                   return LoadingDisplay(size: size);
                 } else if (state is Loaded) {
-                  print('Loaded');
-
                   return TriviaDisplay(
                     size: size,
                     trivia: state.trivia,
                   );
                 } else if (state is Error) {
-                  print('Error');
-
                   return MessageDisplay(size: size, text: state.message);
                 }
                 return MessageDisplay(
